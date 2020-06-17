@@ -56,25 +56,32 @@ public class AssignLeave {
 		
 		
 		// click on Assign leave button
-		driver.findElement(By.xpath("//td[1]//div[1]//a[1]//img[1]")).click();
+		driver.findElement(By.xpath("//div[@class='quickLaunge']//a//img[@src='/webres_5ebd1457b45137.49759927/orangehrmLeavePlugin/images/ApplyLeave.png']")).click();
+		
 		// find Employee name text box and enter name
-		driver.findElement(By.xpath("//input[@id='assignleave_txtEmployee_empName']")).sendKeys("Russel Hamilton");
+		driver.findElement(By.xpath("//input[@id='assignleave_txtEmployee_empName']")).sendKeys("Hannah Flores");
+		
 		// Select leave type from drop down
 		Select leaveType = new Select(driver.findElement(By.id("assignleave_txtLeaveType")));
-		leaveType.selectByVisibleText("Vacation US");
+		leaveType.selectByVisibleText("FMLA US");
+		
 		// select from date from date picker
-		driver.findElement(By.xpath("//form[@id='frmLeaveApply']/fieldset/ol/li[4]/img")).click();
-	    driver.findElement(By.linkText("15")).click();
+		driver.findElement(By.xpath("//img[@src='/webres_5ebd1457b45137.49759927/themes/default/images/calendar.png']//preceding-sibling::input[@id='assignleave_txtFromDate']")).click();
+	    driver.findElement(By.xpath("//a[text()='17']")).click();
+	    
 	    // select to date
 	    driver.findElement(By.xpath("//form[@id='frmLeaveApply']/fieldset/ol/li[5]/img")).click();
-	    driver.findElement(By.linkText("15")).click();
+	    driver.findElement(By.xpath("//a[text()='17']")).click();
+	    
 		// select Partial Days from drop down
 		Select partialDays = new Select(driver.findElement(By.id("assignleave_partialDays")));
 		partialDays.selectByVisibleText("All Days");
+		
 		// find Comment textarea and enter comment
-		driver.findElement(By.id("assignleave_txtComment")).sendKeys("This is my annual leave");
+		driver.findElement(By.id("assignleave_txtComment")).sendKeys("This is sick leave");
+		
 		// find assign button and click
-		driver.findElement(By.id("assignBtn")).click();
+		driver.findElement(By.id("assignBtn")).sendKeys(Keys.RETURN);
 	}
 	
 	@AfterTest
