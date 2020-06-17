@@ -66,7 +66,7 @@ public class AssignLeave {
 		leaveType.selectByVisibleText("FMLA US");
 		
 		// select from date from date picker
-		driver.findElement(By.xpath("//img[@src='/webres_5ebd1457b45137.49759927/themes/default/images/calendar.png']//preceding-sibling::input[@id='assignleave_txtFromDate']")).click();
+		driver.findElement(By.xpath("//img[@src='/webres_5ebd1457b45137.49759927/themes/default/images/calendar.png']//preceding-sibling::input[@id='calFromDate']")).click();
 	    driver.findElement(By.xpath("//a[text()='17']")).click();
 	    
 	    // select to date
