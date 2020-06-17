@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Dashboard.AssignLeave">
+      <class name="Dashboard.Timesheets">
         <methods>
           <include name="setUpchromeDriver"/>
-          <include name="dashboard"/>
           <include name="closeBrowser"/>
+          <include name="dashboard"/>
         </methods>
-      </class> <!-- Dashboard.AssignLeave -->
+      </class> <!-- Dashboard.Timesheets -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
