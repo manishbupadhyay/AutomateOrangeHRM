@@ -56,17 +56,17 @@ public class AssignLeave {
 		
 		
 		// click on Assign leave button
-		driver.findElement(By.xpath("//div[@class='quickLaunge']//a//img[@src='/webres_5ebd1457b45137.49759927/orangehrmLeavePlugin/images/ApplyLeave.png']")).click();
+		driver.findElement(By.xpath("//div[@class='quickLaunge']//a//span[contains(text(),'Assign Leave')]")).click();
 		
 		// find Employee name text box and enter name
-		driver.findElement(By.xpath("//input[@id='assignleave_txtEmployee_empName']")).sendKeys("Hannah Flores");
+		driver.findElement(By.xpath("//input[@id='assignleave_txtEmployee_empName']")).sendKeys("John Smith");
 		
 		// Select leave type from drop down
 		Select leaveType = new Select(driver.findElement(By.id("assignleave_txtLeaveType")));
-		leaveType.selectByVisibleText("FMLA US");
+		leaveType.selectByVisibleText("US - FMLA");
 		
 		// select from date from date picker
-		driver.findElement(By.xpath("//img[@src='/webres_5ebd1457b45137.49759927/themes/default/images/calendar.png']//preceding-sibling::input[@id='calFromDate']")).click();
+		driver.findElement(By.xpath("//li[4]//img[1]")).click();
 	    driver.findElement(By.xpath("//a[text()='17']")).click();
 	    
 	    // select to date
